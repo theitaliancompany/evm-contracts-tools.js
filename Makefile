@@ -106,11 +106,11 @@ build-man:
 	cp \
 	  "man/variables.rst" \
 	  "build/man"
-	cat \
-	  "man/$(_PROJECT_NPM).1.rst" | \
-	  sed \
-	    "s/$(_PROJECT_NPM)/$(_PROJECT)/g" > \
-	    "build/man/$(_PROJECT).1.rst"
+	# cat \
+	#   "man/$(_PROJECT_NPM).1.rst" | \
+	#   sed \
+	#     "s/$(_PROJECT_NPM)/$(_PROJECT)/g" > \
+	#     "build/man/$(_PROJECT).1.rst"
 	rst2man \
 	  "build/man/$(_PROJECT).1.rst" \
 	  "build/man/$(_PROJECT).1"
@@ -192,8 +192,5 @@ install-man:
 	$(_INSTALL_FILE) \
 	  "build/man/$(_PROJECT).1" \
 	  "$(MAN_DIR)/man1/$(_PROJECT).1"
-	$(_INSTALL_FILE) \
-	  "build/man/$(_PROJECT).js.1" \
-	  "$(MAN_DIR)/man1/$(_PROJECT).js.1"
 
 .PHONY: check build-man build-npm install install-doc install-man install-npm install-scripts shellcheck

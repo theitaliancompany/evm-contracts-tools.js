@@ -4,7 +4,7 @@
   "version":
     "0.0.1",
   "description":
-    "Returns information about Ethereum Virtual Machine (EVM) blockchains.",
+    "Library providing useful functions to write native applications interacting with EVM-compatible blockchain networks.",
   "funding": {
     "type":
       "patreon",
