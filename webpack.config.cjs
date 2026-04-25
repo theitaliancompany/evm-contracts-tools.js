@@ -1,5 +1,5 @@
 /**    ----------------------------------------------------------------
- *     txt2bin.webpack.config.cjs
+ *     webpack.config.cjs
  *     ----------------------------------------------------------------
  *     Copyright ©
  *       Pellegrino Prevete
@@ -33,7 +33,7 @@ const
       __dirname);
 const
   _input_file_name =
-    `evm-chains-info`;
+    `libevm`;
 const
   _input_file_path =
     `./${_input_file_name}`;

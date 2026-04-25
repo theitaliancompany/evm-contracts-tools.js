@@ -192,5 +192,8 @@ install-man:
 	$(_INSTALL_FILE) \
 	  "build/man/$(_PROJECT).1" \
 	  "$(MAN_DIR)/man1/$(_PROJECT).1"
+	$(_INSTALL_FILE) \
+	  "build/man/$(_PROJECT).js.1" \
+	  "$(MAN_DIR)/man1/$(_PROJECT).js.1"
 
 .PHONY: check build-man build-npm install install-doc install-man install-npm install-scripts shellcheck

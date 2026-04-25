@@ -12,16 +12,14 @@
       "https://patreon.com/tallero"
   },
   "man": [
-    "./man/evm-chains-info.js.1"
+    "./man/libevm.js.1"
   ],
   "files": [
     "AUTHORS.rst",
     "COPYING",
     "README.md",
-    "evm-chains-info",
-    "evm-chains-info.js",
-    "libevm-chains-info",
-    "libevm-chains-info.js",
+    "libevm",
+    "libevm.js",
     "fs-worker.js",
     "fs-worker.webpack.config.js",
     "index.html",
@@ -36,16 +34,16 @@
     "ethereum"
   ],
   "homepage":
-    "https://github.com/themartiancompany/evm-chains-info.js",
+    "https://github.com/themartiancompany/libevm.js",
   "bugs": {
     "url":
-      "https://github.com/themartiancompany/evm-chains-info.js/issues"
+      "https://github.com/themartiancompany/libevm.js/issues"
   },
   "repository": {
     "type":
       "git",
     "url":
-      "git+https://github.com/themartiancompany/evm-chains-info.js.git"
+      "git+https://github.com/themartiancompany/libevm.js.git"
   },
   "license":
     "AGPL-3.0-or-later",
@@ -80,25 +78,22 @@
       "^0.1.88",
     "ethereum-data":
       "^0.0.1",
+    "evm-chains-info":
+      "^0.0.1",
     "yargs":
       "18.0.0"
   },
   "type":
     "commonjs",
   "main":
-    "libevm-chains-info",
-  "bin":
-    { "evm-chains-info.js":
-        "evm-chains-info" },
+    "libevm",
   "scripts": {
     "build-fs-worker":
       "npx webpack --mode 'production' --config 'fs-worker.webpack.config.cjs' --stats-error-details",
     "build-lib":
-      "npx webpack --mode 'production' --config 'libevm-chains-info.webpack.config.cjs' --stats-error-details",
-    "build-bin":
-      "npx webpack --mode 'production' --config 'evm-chains-info.webpack.config.cjs' --stats-error-details",
+      "npx webpack --mode 'production' --config 'webpack.config.cjs' --stats-error-details",
     "build":
-      "npm run lint && npm run build-fs-worker && npm run build-lib && npm run build-bin",
+      "npm run lint && npm run build-fs-worker && npm run build-lib",
     "lint":
       "npx eslint .",
     "publish-pnm":
