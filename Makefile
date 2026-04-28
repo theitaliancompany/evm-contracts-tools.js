@@ -64,6 +64,11 @@ NPM_FILES=\
   "package.json" \
   "webpack.config.cjs"
 
+MAN_FILES=\
+  evm-contract-bytecode-get \
+  evm-contract-call \
+  evm-contract-deployer-get
+
 all: build-man build-npm build-scripts
 
 check: eslint
@@ -122,20 +127,16 @@ build-man:
 	cp \
 	  "man/variables.rst" \
 	  "build/man"
-	cp \
-	  "man/$(_PROJECT).1.rst" \
-	  "build/man"
-	cat \
-	  "man/$(_PROJECT_NPM).1.rst" | \
-	  sed \
-	    "s/$(_PROJECT_NPM)/$(_PROJECT)/g" > \
-	    "build/man/$(_PROJECT_NPM).1.rst"
-	rst2man \
-	  "build/man/$(_PROJECT_NPM).1.rst" \
-	  "build/man/$(_PROJECT_NPM).1"
-	rm \
-	  "build/man/$(_PROJECT).1.rst" \
-	  "build/man/$(_PROJECT_NPM).1.rst"
+	for _file in $(MAN_FILES); do \
+	  cp \
+	    "man/$${_file}.1.rst" \
+	    "build/man/$${_file}.1.rst"; \
+	  rst2man \
+	    "build/man/$${_file}.1.rst" \
+	    "build/man/$${_file}.1"; \
+	  rm \
+	    "build/man/$${_file}.1.rst"; \
+        done
 	rm \
 	  "build/man/variables.rst"
 
