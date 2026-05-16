@@ -120,7 +120,7 @@ function
          ".local",
          "share",
          "evm-chains",
-         "chains.json"])
+         "chains.json"]);
     _db_exists =
       _file_exists(
         _db_path);
