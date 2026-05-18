@@ -1,6 +1,6 @@
 { "name": "evm-contracts-tools",
   "version":
-    "0.0.18",
+    "0.0.19",
   "description":
     "JavaScript programs and libraries to enable seamless development of native computer applications designed to interact with Ethereum Virtual Machine-compatible networks.",
   "funding": {
@@ -84,7 +84,7 @@
     "evm-chains-info":
       "^0.0.18",
     "evm-transactions-tools":
-      "^0.0.6",
+      "^0.0.7",
     "evm-wallet.js":
       "^0.0.26",
     "libevm":

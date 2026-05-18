@@ -37,7 +37,10 @@ export default defineConfig([
      "build/**",
      "node_modules/**",
      "eslint.config.js",
+     "evm-contract-call.js",
      "fs-worker.js",
+     "libevm-contract-call.js",
+     "libevm-contracts-tools.js",
      "man/**"
    ],
    rules:
@@ -64,7 +67,10 @@ export default defineConfig([
    ignores: [
      "build/**",
      "eslint.config.js",
+     "evm-contract-call.js",
      "fs-worker.js",
+     "libevm-contract-call.js",
+     "libevm-contracts-tools.js",
      "node_modules/**",
      "man/**"
    ],

@@ -54,7 +54,7 @@ const
   _wei_to_ether =
     _ethers.formatEther;
 const
-  _evm_transaction_tools_module =
+  _evm_transactions_tools_module =
     require(
       "evm-transactions-tools");
 const
