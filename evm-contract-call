@@ -541,7 +541,8 @@ function
         0];
   const
     method_args =
-      _out.slice(
+      _argv[
+        "_"].slice(
         2,
         _argv[
           "_"].length - 2);
