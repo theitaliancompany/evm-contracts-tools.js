@@ -148,7 +148,6 @@ function
       contract_compiler_output;
   _abi =
     contract_abi;
-  const
     _abi_target =
       _abi;
   if ( typeof(
