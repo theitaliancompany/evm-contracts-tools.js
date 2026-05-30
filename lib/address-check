@@ -112,8 +112,7 @@ function
     _exit) {
   let
     _display_fun,
-    _line,
-    _text;
+    _line;
   const
     _argv =
       _argv_get();

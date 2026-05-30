@@ -266,7 +266,7 @@ function
 async function 
   _overrides_set() {
   _address_check(
-    target_address);
+    contract_address);
   if ( call_date == "" ||
        typeof(
          call_date) == "undefined" ) {

@@ -56,6 +56,7 @@ NPM_FILES=\
   "README.md" \
   "COPYING" \
   "AUTHORS.rst" \
+  "dist" \
   "evm-contract-call" \
   "evm-contract-call.webpack.config.cjs" \
   "lib" \
@@ -137,10 +138,21 @@ build-npm:
 
 	make \
 	  build-man
-	cp \
-	  -r \
-	  $(NPM_FILES) \
-	  "build"; \
+	for _file in $(_NPM_FILES); do \
+	  if [[ -d "$${_file}" ]]; then \
+	    mkdir \
+	     -p \
+	     "build/$${_file}"; \
+	    cp \
+	      -r \
+	      "$${_file}/"* \
+	      "build/$${_file}"; \
+	  elif [[ -e "$${_file}" ]]; then \
+	    cp \
+	      "$${_file}" \
+	      "build"; \
+	  fi; \
+	done
 	cd \
 	  "build"; \
 	_version="$$( \
