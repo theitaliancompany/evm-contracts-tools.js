@@ -52,9 +52,6 @@
      target_networks:
        writable */
 /* global
-     quiet:
-       writable */
-/* global
      api_key:
        writable */
 /* global
